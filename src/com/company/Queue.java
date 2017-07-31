@@ -6,7 +6,7 @@ import java.util.List;
 public class Queue {
 
     private List queue = new LinkedList();
-    private int  size = 5;
+    private int  size = 0;
 
     public Queue(int size){
         this.size = size;
@@ -22,7 +22,7 @@ public class Queue {
     {
         while(this.queue.size() == this.size)
         {
-            wait();
+            wait(5000);
             System.out.println("Queue is full please wait");
             System.out.println("Wait is executed");
         }

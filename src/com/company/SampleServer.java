@@ -51,31 +51,33 @@ public class SampleServer {
                         //int thivya = 0; //Reading the message from the client
                         try
                         {
-                            if (noOfThreads >= thivya ) {
+
 
                                 socket = serverSocket.accept();
                                 System.out.println("Server is connected" + port);
                                 InputStream is = socket.getInputStream();
                                 InputStreamReader isr = new InputStreamReader(is);
                                 BufferedReader br = new BufferedReader(isr);
+
                                 message = br.readLine();
                                 ob= message;
                                 System.out.println("Serveris connected : " + message);
 
                                 thivya = thivya + 1;
-                            }
-                            int max=thivya+1;
 
-                           System.out.println("size of client request : " + thivya);
-                            System.out.println("mmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaxxxxxxxxxxx : " + max);
+                          // int max=thivya+1;
 
-                            if(noOfThreads < max) {
+                           //System.out.println("size of client request : " + thivya);
+                        //    System.out.println("mmmmmmmmmmmmmmmmmmmmmmmaaaaaaaaaaaaaaaxxxxxxxxxxx : " + max);
 
-                                Queue q = new Queue(maxNoOfTaskInQueue);
+                        /*  else { int max=thivya+1;
+
+
                                 for(int i=0;i< (max-noOfThreads);i++) {
+                                    Queue q = new Queue(maxNoOfTaskInQueue);
                                     q.enqueue(ob);
                                 }
-                            }
+                            }*/
 
 
 
